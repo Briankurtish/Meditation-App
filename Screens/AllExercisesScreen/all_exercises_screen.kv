@@ -2,18 +2,46 @@
 
 <AllExercisesScreen>
 
-    MDBoxLayout:
+    MDRelativeLayout:
         md_bg_color: get_color_from_hex("#edceba")
         size_hint_y: .45
         pos_hint: {"top": 1}
-        FitImage:
+
+
+        Image:
             source: "assets/images/undraw_pilates_gpdb.png"
             size_hint: None, None
             size: self.parent.width - dp(72), self.parent.height - dp(72)
-            pos_hint: {"center_y": .52}
+            allow_strech: True
+            keep_ratio: False
+            x: -dp(20)
+            y: dp(40)
     
     MDLabel:
-        text:
+        text: "Good Morning\nKurt"
+        bold: True
+        font_name: 'assets/fonts/Cario/Cario-Bold.ttf'
+        font_style: "H4"
+        theme_text_color: "Custom"
+        text_color: get_color_from_hex("#363445")
+        pos_hint: {"center_y": .85}
+        x: "24dp"
+
+
+    MDGridLayout:
+        cols: 2
+        rows: 2
+        spacing: "18dp"
+        padding: "36dp"
+        size_hint_y: None
+        height: root.height / 1.4 
+
+
+        Button:
+        Button:
+        Button:
+        Button:
+        
             
 
     
