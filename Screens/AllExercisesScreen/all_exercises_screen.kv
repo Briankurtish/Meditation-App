@@ -1,0 +1,19 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<AllExercisesScreen>
+
+    MDBoxLayout:
+        md_bg_color: get_color_from_hex("#edceba")
+        size_hint_y: .45
+        pos_hint: {"top": 1}
+        FitImage:
+            source: "assets/images/undraw_pilates_gpdb.png"
+            size_hint: None, None
+            size: self.parent.width - dp(72), self.parent.height - dp(72)
+            pos_hint: {"center_y": .52}
+    
+    MDLabel:
+        text:
+            
+
+    
