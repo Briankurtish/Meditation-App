@@ -23,6 +23,7 @@ class MeditationAppLive(MDApp, App):
     ]
 
     def build_app(self):
+        self.theme_cls.primary_palette = "Orange"
         import Screens.RootScreen.root_screen
 
         Window.bind(on_keyboard=self._rebuild)

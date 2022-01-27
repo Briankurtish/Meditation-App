@@ -3,6 +3,7 @@
 <AllExercisesScreen>
 
     MDRelativeLayout:
+        id: image_bg_box
         md_bg_color: get_color_from_hex("#edceba")
         size_hint_y: .45
         pos_hint: {"top": 1}
@@ -20,15 +21,47 @@
     MDLabel:
         text: "Good Morning\nKurt"
         bold: True
-        font_name: 'assets/fonts/Cario/Cario-Bold.ttf'
-        font_style: "H4"
+        font_size: "28sp"
+        #font_name: 'assets/fonts/Cario/Cario-Bold.ttf'
         theme_text_color: "Custom"
         text_color: get_color_from_hex("#363445")
-        pos_hint: {"center_y": .85}
-        x: "24dp"
+        pos_hint: {"center_y": .87}
+        x: "36dp"
+        line_height: 1
 
+    MDTextFieldRound:
+        icon_left: "magnify"
+        hint_text: "Search"
+        size_hint: None, None
+        width: root.width - cards_box.padding[0] * 2 -dp(32)
+        pos_hint: {"center_x": .5}
+        y: cards_box.height
+        -height: "42dp"
+        normal_color: 1, 1, 1, 1
+    
+    MDBoxLayout:
+        size_hint: None, None
+        size: "56dp", "56dp"
+        md_bg_color: get_color_from_hex("#e1b39b")
+        radius: self.width / 2
+        x: root.width - self.width / 2
+        y: image_bg_box.y + self.height
+
+    MDRelativeLayout:
+        size_hint: None, None
+        size: "48dp", "48dp"
+        md_bg_color: get_color_from_hex("#f1bea1")
+        radius: self.width / 2
+        x: root.width - self.width - self.width / 2 
+        y: root.height - (self.height + self.height / 2)
+
+        Image:
+            source: "assets\icons\menu.png"
+            size_hint: None, None
+            size: "48dp", "48dp"
 
     MDGridLayout:
+        id: cards_box
         cols: 2
         rows: 2
         spacing: "18dp"
@@ -38,9 +71,20 @@
 
 
         Card:
+            source: "assets\icons\hamburger.png"
+            text: "Diet Recommendation"
+
         Card:
+            source: "assets\icons\excrecises.png"
+            text: "Kegel Exercises"
+
         Card:
+            source: "assets\icons\meditation.png"
+            text: "Meditation"
+
         Card:
+            source: "assets\icons\yoga.png"
+            text: "yoga"
         
             
 
