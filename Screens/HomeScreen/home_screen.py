@@ -1,4 +1,4 @@
 from kivymd.uix.screen import MDScreen
 
-class AllExercisesScreen(MDScreen):
+class HomeScreen(MDScreen):
     pass

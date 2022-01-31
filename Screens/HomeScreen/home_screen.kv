@@ -1,0 +1,89 @@
+#: import get_color_from_hex kivy.utils.get_color_from_hex
+
+<HomeScreen>
+
+    MDRelativeLayout:
+        id: imaage_bg_box
+        md_bg_color: get_color_from_hex("#FFF2E8")
+        size_hint_y: .45
+        pos_hint: {"top": 1}
+        
+        Image:
+            source: "assets/images/images.jpg"
+            size_hint: None, None
+            size: self.parent.width , self.parent.height
+            allow_stretch: True
+            keep_ratio: False
+        
+        Label:
+            text: "STAR MUM SUPPORT"
+            color: get_color_from_hex("#109CAC")
+            font_size: 20
+            bold: True
+            x: -dp(50)
+            
+    
+    # MDLabel:
+    #     text: "Good Morning\nKurt"
+    #     bold: True
+    #     font_size: "28sp"
+    #     #font_name: 'assets/fonts/Cario/Cario-Bold.ttf'
+    #     theme_text_color: "Custom"
+    #     text_color: get_color_from_hex("#363445")
+    #     pos_hint: {"center_y": .87}
+    #     x: "36dp"
+    #     line_height: 1
+
+   
+    
+    # MDBoxLayout:
+    #     size_hint: None, None
+    #     size: "56dp", "56dp"
+    #     md_bg_color: get_color_from_hex("#e1b39b")
+    #     radius: self.width / 2
+    #     x: root.width - self.width / 2
+    #     y: image_bg_box.y + self.height
+
+    # MDRelativeLayout:
+    #     size_hint: None, None
+    #     size: "48dp", "48dp"
+    #     md_bg_color: get_color_from_hex("#f1bea1")
+    #     radius: self.width / 2
+    #     x: root.width - self.width - self.width / 2 
+    #     y: root.height - (self.height + self.height / 2)
+
+    #     Image:
+    #         source: "assets\icons\menu.png"
+    #         size_hint: None, None
+    #         size: "48dp", "48dp"
+
+    MDGridLayout:
+        id: cards_box
+        cols: 2
+        rows: 2
+        spacing: "18dp"
+        padding: "36dp"
+        size_hint_y: None
+        height: root.height / 1.4 
+
+
+        CustomCard:
+            source: "assets/images/1st.png"
+            text: "1st Trimester"
+            on_press: print("worked")
+
+        CustomCard:
+            source: "assets/images/2nd.jpg"
+            text: "2nd Trimester"
+
+        CustomCard:
+            source: "assets/images/3rd.jpg"
+            text: "3rd Trimester"
+
+        CustomCard:
+            source: "assets/images/4th.jpg"
+            text: "Doctor's Advice"
+        
+            
+
+    
