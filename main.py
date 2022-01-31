@@ -5,7 +5,7 @@ from kivy.core.window import Window
 
 from kaki.app import App
 
-class MeditationAppLive(MDApp, App):
+class MeditationAppLive(App):
     KV_FILES = {
         os.path.join(os.getcwd(), "Screens", "RootScreen", "root_screen.kv"),
         os.path.join(os.getcwd(), "Screens", "TodayScreen", "today_screen.kv"),
